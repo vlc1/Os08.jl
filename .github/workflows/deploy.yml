@@ -29,9 +29,6 @@ jobs:
           using PlutoSliderServer;
           export_directory(Export_output_dir="build");'
 
-    - name: Write dummy file
-      run: echo 'Hello, World!' > build/index.md
-
     - name: Build and deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
