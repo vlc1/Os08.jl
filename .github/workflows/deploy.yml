@@ -25,10 +25,7 @@ jobs:
           using Pkg;
           Pkg.add(Pkg.PackageSpec(name="PlutoSliderServer"));
           using PlutoSliderServer;
-          export_directory(Export_output_dir="./build");'
-
-    - name: Create directory
-      run: mkdir build
+          export_directory(Export_output_dir="build");'
 
     - name: Write dummy file
       run: echo 'Hello, World!' > build/index.md
