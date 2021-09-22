@@ -25,7 +25,7 @@ jobs:
           using Pkg;
           Pkg.add(Pkg.PackageSpec(name="PlutoSliderServer"));
           using PlutoSliderServer;
-          export_directory("notebooks", Export_output_dir="build");'
+          export_directory(Export_output_dir="./build");'
 
     - name: Create directory
       run: mkdir build
