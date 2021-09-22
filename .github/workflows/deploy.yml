@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - master
+      - gh-action
 
 jobs:
   build-and-deploy:
@@ -23,6 +23,8 @@ jobs:
     - run: |
         julia -e '
           using Pkg;
+          Pkg.add(Pkg.PackageSpec(name="Plots"));
+          using Plots;
           Pkg.add(Pkg.PackageSpec(name="PlutoSliderServer"));
           using PlutoSliderServer;
           export_directory(Export_output_dir="build");'
