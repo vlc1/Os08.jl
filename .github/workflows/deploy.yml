@@ -29,10 +29,10 @@ jobs:
           using PlutoSliderServer;
           export_directory(Export_output_dir="build");'
 
-    - name: Build and deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
-
+#    - name: Build and deploy
+#      uses: JamesIves/github-pages-deploy-action@releases/v3
+#      with:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        BRANCH: gh-pages
+#        FOLDER: build
+#
