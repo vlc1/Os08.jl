@@ -5,7 +5,7 @@ using Markdown
 using InteractiveUtils
 
 # ╔═╡ 35a850c8-d24c-4593-b551-f3b9bb49e82d
-using LinearAlgebra, NLsolve, Plots
+using LinearAlgebra, NLsolve#, Plots
 
 # ╔═╡ d61e1ea6-f924-11ea-00dc-794c93177d22
 md"""
@@ -372,9 +372,9 @@ La solution numérique peut être obtenue et visualisée comme suit.
 # ╔═╡ b9a3b65e-9c81-499d-acc5-85afa8d6703b
 begin
 	local T, Y = cauchy(explicit!, linear, 0.5, 10.0, ones(1))
-	local fig = plot()
-	scatter!(fig, T, first.(Y), label = "num")
-	plot!(fig, t -> first.(solution.(t)), label = "exact")
+#	local fig = plot()
+#	scatter!(fig, T, first.(Y), label = "num")
+#	plot!(fig, t -> first.(solution.(t)), label = "exact")
 end
 
 # ╔═╡ 6be4f6f8-58e3-4e23-b34e-514e1045d08e
@@ -474,8 +474,8 @@ end
 # ╔═╡ 580e8356-4fd2-47e1-a5a4-7063998b4ecb
 begin
 	local T, Y = cauchy(explicit!, nonlinear, 0.1, 1.0, ones(1))
-	local fig = plot()
-	scatter!(fig, T, first.(Y), label = "num")
+#	local fig = plot()
+#	scatter!(fig, T, first.(Y), label = "num")
 end
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
